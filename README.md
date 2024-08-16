@@ -11,6 +11,7 @@ This codebase is of course only a backtest and doesn't connect to any real excha
 
 ### My Algorithm: 
 The arbitrage will make money in two ways. The first way is buying the spot BTC when the perpetual spikes, as the spot BTC will then spike as well. Likewise if we short the spot BTC when the perpetual crashes, then the spot will crash shortly thereafter. Therefore a successful algorithm simply needs to create accurate buy and sell signals by detecting significant spikes and dips in the price of the perpetual BTC market. Here's my successful strategy for accomplishing that:
+![](./arb_images/buy_and_sell_signals.png)
 
 1) Calculate the 'spread' between the spot BTC and perpetual BTC market at each timestep.
 2) Calculate a moving_average of this spread at each timestep with some window size.
